@@ -6,7 +6,7 @@
 /*   By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 15:25:13 by mchonata          #+#    #+#             */
-/*   Updated: 2023/12/21 18:17:11 by mchonata         ###   ########.fr       */
+/*   Updated: 2023/12/21 18:22:35 by mchonata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ static	int	ft_process(char ctrl, va_list *args)
 {
 	if (ctrl == 'c')
 		return (write(1, args, 1));
+	return (0);
 }
 // str
 // ptr
