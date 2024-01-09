@@ -1,4 +1,4 @@
-SRCS	=	ft_printf.c	
+SRCS	=	ft_printf.c
 
 OBJS	= ${SRCS:.c=.o}
 
@@ -18,7 +18,8 @@ $(NAME): $(OBJS)
 
 all:		${NAME}
 
-clean:		${RM} ${OBJS}
+clean:
+			${RM} ${OBJS}
 
 fclean:		clean
 			${RM} ${NAME}
