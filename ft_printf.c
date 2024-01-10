@@ -6,7 +6,7 @@
 /*   By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 15:25:13 by mchonata          #+#    #+#             */
-/*   Updated: 2023/12/21 18:22:35 by mchonata         ###   ########.fr       */
+/*   Updated: 2024/01/10 12:00:55 by mchonata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_printf(char const *ctrl, ...)
 			i++;
 		}
 		else
-			total += write(1, ctrl, 1);
+			total += write(1, &ctrl[i], 1);
 		i++;
 	}
 	va_end(args);
