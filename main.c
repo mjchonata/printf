@@ -45,6 +45,17 @@ void test_str()
 	ft_printf("\n");
 }
 
+void test_str_null()
+{
+	int		size;
+
+	size = printf(WRITE_STR, NULL);
+	print_size(size);
+	size = ft_printf(WRITE_STR, NULL);
+	print_size(size);
+	ft_printf("\n");
+}
+
 #include <string.h>
 #include <sys/errno.h>
 #define ERROR_ARGC "Error\n\tthis function expects 1 argv"
@@ -61,7 +72,10 @@ int main(int argc, char **argv)
 	if (argc == 1 || strcmp(argv[1], "char") == 0)
 		test_char();
 	if (argc == 1 || strcmp(argv[1], "str") == 0)
+	{
 		test_str();
+		test_str_null();
+	}
 }
 //gcc -Wall -Wextra -Werror -g main.c libftprintf.a && ./a.out
 
