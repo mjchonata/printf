@@ -6,12 +6,14 @@
 #    By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 19:30:30 by mchonata          #+#    #+#              #
-#    Updated: 2024/01/22 19:30:31 by mchonata         ###   ########.fr        #
+#    Updated: 2024/01/22 22:01:39 by mchonata         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS	=	ft_printf.c	\
-			ft_putstr.c
+			ft_strlen.c	\
+			ft_putstr.c	\
+			ft_putnbr.c
 
 OBJS	= ${SRCS:.c=.o}
 

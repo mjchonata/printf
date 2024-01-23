@@ -6,22 +6,12 @@
 /*   By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 16:23:58 by mchonata          #+#    #+#             */
-/*   Updated: 2024/01/22 18:09:10 by mchonata         ###   ########.fr       */
+/*   Updated: 2024/01/22 21:21:59 by mchonata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #define WRITE_NULL "(null)"
-
-size_t	ft_strlen(char *s)
-{
-	size_t	count;
-
-	count = 0;
-	while (s[count] != '\0')
-		count++;
-	return (count);
-}
 
 int	ft_putstr(char *str)
 {

@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include "ft_printf.h"
 
-void print_size(int size)
+void	print_size(int size)
 {
 	printf("%d\n", size);
 }
 
 //para pasar la misma variable a ambas funciones --> #define
 #define WRITE_HOLA "Hola\t"
-void test_no_conversion()
+
+void	test_no_conversion()
 {
 	int			size;
 
@@ -20,7 +21,8 @@ void test_no_conversion()
 }
 
 #define WRITE_CHAR "$%c$\t"
-void test_char()
+
+void	test_char()
 {
 	int		size;
 	const char	character = 'H';
@@ -33,7 +35,8 @@ void test_char()
 }
 
 #define WRITE_STR "$%s$\t"
-void test_str()
+
+void	test_str()
 {
 	int		size;
 	const char	*str = "¡Adiós mundo cruel!";
@@ -45,13 +48,28 @@ void test_str()
 	ft_printf("\n");
 }
 
-void test_str_null()
+void	test_str_null()
 {
 	int		size;
 
 	size = printf(WRITE_STR, NULL);
 	print_size(size);
 	size = ft_printf(WRITE_STR, NULL);
+	print_size(size);
+	ft_printf("\n");
+}
+
+#define WRITE_NBR "$%d$\t"
+
+void	test_nbr()
+{
+	int		size;
+	int		nbr;
+
+	nbr = 32165655;
+	size = printf(WRITE_NBR, nbr);
+	print_size(size);
+	size = ft_printf(WRITE_NBR, nbr);
 	print_size(size);
 	ft_printf("\n");
 }
@@ -76,6 +94,7 @@ int main(int argc, char **argv)
 		test_str();
 		test_str_null();
 	}
+	test_nbr();
 }
 //gcc -Wall -Wextra -Werror -g main.c libftprintf.a && ./a.out
 
