@@ -66,10 +66,40 @@ void	test_nbr()
 	int		size;
 	int		nbr;
 
-	nbr = 32165655;
+	nbr = -2;
 	size = printf(WRITE_NBR, nbr);
 	print_size(size);
 	size = ft_printf(WRITE_NBR, nbr);
+	print_size(size);
+	ft_printf("\n");
+}
+
+#define WRITE_UNINT "$%u$\t"
+
+void	test_uints()
+{
+	int		size;
+	int		nbr;
+
+	nbr = -2;
+	size = printf(WRITE_UNINT, nbr);
+	print_size(size);
+	size = ft_printf(WRITE_UNINT, nbr);
+	print_size(size);
+	ft_printf("\n");
+}
+
+#define WRITE_HEX "$%x$\t"
+
+void	test_hex()
+{
+	int		size;
+	int		nbr;
+
+	nbr = 6764;
+	size = printf(WRITE_HEX, nbr);
+	print_size(size);
+	size = ft_printf(WRITE_HEX, nbr);
 	print_size(size);
 	ft_printf("\n");
 }
@@ -95,6 +125,8 @@ int main(int argc, char **argv)
 		test_str_null();
 	}
 	test_nbr();
+	test_uints();
+	test_hex();
 }
 //gcc -Wall -Wextra -Werror -g main.c libftprintf.a && ./a.out
 
@@ -119,7 +151,6 @@ int main(int argc, char **argv)
 // 	else
 // 		printf("OK,\t** working in progress **\n");
 // }
-
 
 // int main ()
 // // int main(int argc, char **argv)

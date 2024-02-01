@@ -6,7 +6,7 @@
 /*   By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 15:25:13 by mchonata          #+#    #+#             */
-/*   Updated: 2024/01/23 15:26:47 by mchonata         ###   ########.fr       */
+/*   Updated: 2024/02/01 19:39:20 by mchonata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,22 @@ int	ft_putchar(char c)
 
 static	int	ft_process(char ctrl, va_list *args)
 {
-	if (ctrl == 'c')
+	if (ctrl == '%')
+		return (ft_putchar('%'));
+	else if (ctrl == 'c')
 		return (ft_putchar(va_arg(*args, int)));
 	else if (ctrl == 's')
 		return (ft_putstr(va_arg(*args, char *)));
 	else if (ctrl == 'd' || ctrl == 'i')
 		return (ft_putnbr(va_arg(*args, int)));
+	else if (ctrl == 'u')
+		return (ft_uints(va_arg(*args, int)));
+	else if (ctrl == 'h')
+		return (ft_hex(va_arg(*args, int)));
 	return (0);
 }
 // ptr
-// uints
 // hex
-// %
 
 int	ft_printf(char const *ctrl, ...)
 {
