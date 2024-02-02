@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_printnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 21:13:22 by mchonata          #+#    #+#             */
-/*   Updated: 2024/02/01 12:40:45 by mchonata         ###   ########.fr       */
+/*   Updated: 2024/02/02 13:35:21 by mchonata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #define INT_MIN "-2147483648"
 
-int	ft_putnbr(int n)
+int	ft_printnbr(int n)
 {
 	int	nb;
 	int	aux;
@@ -29,7 +29,7 @@ int	ft_putnbr(int n)
 	}
 	if (nb > 9)
 	{
-		aux += ft_putnbr(nb / 10);
+		aux += ft_printnbr(nb / 10);
 	}
 	aux += ft_putchar(nb % 10 + '0');
 	return (aux);
