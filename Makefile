@@ -6,7 +6,7 @@
 #    By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 19:30:30 by mchonata          #+#    #+#              #
-#    Updated: 2024/02/02 13:35:12 by mchonata         ###   ########.fr        #
+#    Updated: 2024/02/02 15:43:23 by mchonata         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,8 @@ SRCS	=	ft_printf.c	\
 			ft_strlen.c	\
 			ft_printstr.c	\
 			ft_printnbr.c	\
-			ft_uints.c	\
-			ft_hex.c
+			ft_printuints.c	\
+			ft_printhex.c
 
 OBJS	= ${SRCS:.c=.o}
 
