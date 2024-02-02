@@ -6,13 +6,13 @@
 #    By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 19:30:30 by mchonata          #+#    #+#              #
-#    Updated: 2024/02/01 18:20:23 by mchonata         ###   ########.fr        #
+#    Updated: 2024/02/02 13:31:26 by mchonata         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS	=	ft_printf.c	\
 			ft_strlen.c	\
-			ft_putstr.c	\
+			ft_printstr.c	\
 			ft_putnbr.c	\
 			ft_uints.c	\
 			ft_hex.c

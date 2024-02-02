@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_printstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 16:23:58 by mchonata          #+#    #+#             */
-/*   Updated: 2024/01/22 21:21:59 by mchonata         ###   ########.fr       */
+/*   Updated: 2024/02/02 13:31:42 by mchonata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #define WRITE_NULL "(null)"
 
-int	ft_putstr(char *str)
+int	ft_printstr(char *str)
 {
 	size_t	len;
 
