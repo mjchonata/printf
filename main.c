@@ -66,7 +66,7 @@ void	test_nbr()
 	int		size;
 	int		nbr;
 
-	nbr = -2;
+	nbr = -2147483648;
 	size = printf(WRITE_NBR, nbr);
 	print_size(size);
 	size = ft_printf(WRITE_NBR, nbr);
@@ -96,10 +96,25 @@ void	test_hex()
 	int		size;
 	int		nbr;
 
-	nbr = 6764;
+	nbr = 2147483647;
 	size = printf(WRITE_HEX, nbr);
 	print_size(size);
 	size = ft_printf(WRITE_HEX, nbr);
+	print_size(size);
+	ft_printf("\n");
+}
+
+#define WRITE_HEXUPP "$%X$\t"
+
+void	test_hexupp()
+{
+	int		size;
+	int		nbr;
+
+	nbr = 123;
+	size = printf(WRITE_HEXUPP, nbr);
+	print_size(size);
+	size = ft_printf(WRITE_HEXUPP, nbr);
 	print_size(size);
 	ft_printf("\n");
 }
@@ -124,9 +139,13 @@ int main(int argc, char **argv)
 		test_str();
 		test_str_null();
 	}
-	test_nbr();
-	test_uints();
-	test_hex();
+	if (argc == 1 || strcmp(argv[1], "nbr") == 0)
+	{
+		test_nbr();
+		test_uints();
+		test_hex();
+		test_hexupp();
+	}
 }
 //gcc -Wall -Wextra -Werror -g main.c libftprintf.a && ./a.out
 

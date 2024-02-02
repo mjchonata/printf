@@ -6,15 +6,14 @@
 /*   By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 21:13:22 by mchonata          #+#    #+#             */
-/*   Updated: 2024/02/02 14:11:31 by mchonata         ###   ########.fr       */
+/*   Updated: 2024/02/02 19:49:41 by mchonata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #define INT_MIN "-2147483648"
 
-
-///	OPCION 1
+///	option 1
 // int	ft_printnbr(int n)
 // {
 // 	int	nb;
@@ -39,7 +38,7 @@
 // }
 
 
-///	OPCION 2
+///	option 2
 static	size_t	size_nbr(int nbr)
 {
 	size_t	len;
@@ -85,7 +84,7 @@ int	ft_printnbr(int n)
 }
 
 
-///	OPCION 3
+///	option 3
 // static	size_t	size_nbr(int nbr)
 // {
 // 	size_t	len;
