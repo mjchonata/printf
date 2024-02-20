@@ -6,7 +6,7 @@
 /*   By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 15:25:30 by mchonata          #+#    #+#             */
-/*   Updated: 2024/02/02 19:33:19 by mchonata         ###   ########.fr       */
+/*   Updated: 2024/02/19 22:05:03 by mchonata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <stdint.h>
 # define BASE16UPP "0123456789ABCDEF"
 # define BASE16LOW "0123456789abcdef"
 
@@ -25,7 +26,8 @@ size_t	ft_strlen(char *s);
 int		ft_printstr(char *str);
 int		ft_printnbr(int n);
 int		ft_printuints(unsigned int n);
-int		ft_printhex(unsigned int n, const char* base);
+int		ft_printhex(unsigned int n, const char *base);
+int		ft_printptr(uintptr_t ptr, const char *base);
 // ptr
 // hex
 #endif

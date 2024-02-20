@@ -7,7 +7,7 @@ void	print_size(int size)
 }
 
 //para pasar la misma variable a ambas funciones --> #define
-#define WRITE_HOLA "Hola\t"
+#define WRITE_HOLA "%%%%%%\t"
 
 void	test_no_conversion()
 {
@@ -119,6 +119,44 @@ void	test_hexupp()
 	ft_printf("\n");
 }
 
+#define WRITE_PTR "$%p$\t"
+
+void	test_ptr()
+{
+	int		size;
+	const char	*str = "";
+
+	size = printf(WRITE_PTR, str);
+	print_size(size);
+	size = ft_printf(WRITE_PTR, str);
+	print_size(size);
+	ft_printf("\n");
+}
+
+void	test_ptr1()
+{
+	int		size;
+	const char	*str = "123";
+
+	size = printf(WRITE_PTR, str);
+	print_size(size);
+	size = ft_printf(WRITE_PTR, str);
+	print_size(size);
+	ft_printf("\n");
+}
+
+void	test_ptr2()
+{
+	int		size;
+	const char	*str = "2147483647";
+
+	size = printf(WRITE_PTR, str);
+	print_size(size);
+	size = ft_printf(WRITE_PTR, str);
+	print_size(size);
+	ft_printf("\n");
+}
+
 #include <string.h>
 #include <sys/errno.h>
 #define ERROR_ARGC "Error\n\tthis function expects 1 argv"
@@ -145,6 +183,9 @@ int main(int argc, char **argv)
 		test_uints();
 		test_hex();
 		test_hexupp();
+		test_ptr();
+		test_ptr1();
+		test_ptr2();
 	}
 }
 //gcc -Wall -Wextra -Werror -g main.c libftprintf.a && ./a.out
