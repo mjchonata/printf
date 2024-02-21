@@ -124,6 +124,18 @@ void	test_hexupp()
 void	test_ptr()
 {
 	int		size;
+	const char	*str = "-54654654";
+
+	size = printf(WRITE_PTR, str);
+	print_size(size);
+	size = ft_printf(WRITE_PTR, str);
+	print_size(size);
+	ft_printf("\n");
+}
+
+void	test_ptr1()
+{
+	int		size;
 	const char	*str = "123";
 
 	size = printf(WRITE_PTR, str);
@@ -133,29 +145,17 @@ void	test_ptr()
 	ft_printf("\n");
 }
 
-// void	test_ptr1()
-// {
-// 	int		size;
-// 	const char	*str = "123";
+void	test_ptr2()
+{
+	int		size;
+	const char	*str = "2147483647";
 
-// 	size = printf(WRITE_PTR, str);
-// 	print_size(size);
-// 	size = ft_printf(WRITE_PTR, str);
-// 	print_size(size);
-// 	ft_printf("\n");
-// }
-
-// void	test_ptr2()
-// {
-// 	int		size;
-// 	const char	*str = "2147483647";
-
-// 	size = printf(WRITE_PTR, str);
-// 	print_size(size);
-// 	size = ft_printf(WRITE_PTR, str);
-// 	print_size(size);
-// 	ft_printf("\n");
-// }
+	size = printf(WRITE_PTR, str);
+	print_size(size);
+	size = ft_printf(WRITE_PTR, str);
+	print_size(size);
+	ft_printf("\n");
+}
 
 #include <string.h>
 #include <sys/errno.h>
@@ -184,8 +184,8 @@ int main(int argc, char **argv)
 		test_hex();
 		test_hexupp();
 		test_ptr();
-	// 	test_ptr1();
-	// 	test_ptr2();
+		test_ptr1();
+		test_ptr2();
 	}
 }
 //gcc -Wall -Wextra -Werror -g main.c libftprintf.a && ./a.out

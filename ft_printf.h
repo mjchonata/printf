@@ -6,7 +6,7 @@
 /*   By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 15:25:30 by mchonata          #+#    #+#             */
-/*   Updated: 2024/02/21 11:35:08 by mchonata         ###   ########.fr       */
+/*   Updated: 2024/02/21 12:07:49 by mchonata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_printstr(char *str);
 int		ft_printnbr(int n);
 int		ft_printuints(unsigned int n);
 int		ft_printhex(unsigned int n, const char *base);
-// int		ft_printptr(uintptr_t ptr, const char *base);
+int		ft_printptr(uintptr_t ptr, const char *base);
 // ptr
 // hex
 #endif
