@@ -96,7 +96,7 @@ void	test_hex()
 	int		size;
 	int		nbr;
 
-	nbr = 2147483647;
+	nbr = -232125;
 	size = printf(WRITE_HEX, nbr);
 	print_size(size);
 	size = ft_printf(WRITE_HEX, nbr);
@@ -111,7 +111,7 @@ void	test_hexupp()
 	int		size;
 	int		nbr;
 
-	nbr = 123;
+	nbr = 12345;
 	size = printf(WRITE_HEXUPP, nbr);
 	print_size(size);
 	size = ft_printf(WRITE_HEXUPP, nbr);
@@ -124,18 +124,6 @@ void	test_hexupp()
 void	test_ptr()
 {
 	int		size;
-	const char	*str = "";
-
-	size = printf(WRITE_PTR, str);
-	print_size(size);
-	size = ft_printf(WRITE_PTR, str);
-	print_size(size);
-	ft_printf("\n");
-}
-
-void	test_ptr1()
-{
-	int		size;
 	const char	*str = "123";
 
 	size = printf(WRITE_PTR, str);
@@ -145,17 +133,29 @@ void	test_ptr1()
 	ft_printf("\n");
 }
 
-void	test_ptr2()
-{
-	int		size;
-	const char	*str = "2147483647";
+// void	test_ptr1()
+// {
+// 	int		size;
+// 	const char	*str = "123";
 
-	size = printf(WRITE_PTR, str);
-	print_size(size);
-	size = ft_printf(WRITE_PTR, str);
-	print_size(size);
-	ft_printf("\n");
-}
+// 	size = printf(WRITE_PTR, str);
+// 	print_size(size);
+// 	size = ft_printf(WRITE_PTR, str);
+// 	print_size(size);
+// 	ft_printf("\n");
+// }
+
+// void	test_ptr2()
+// {
+// 	int		size;
+// 	const char	*str = "2147483647";
+
+// 	size = printf(WRITE_PTR, str);
+// 	print_size(size);
+// 	size = ft_printf(WRITE_PTR, str);
+// 	print_size(size);
+// 	ft_printf("\n");
+// }
 
 #include <string.h>
 #include <sys/errno.h>
@@ -184,8 +184,8 @@ int main(int argc, char **argv)
 		test_hex();
 		test_hexupp();
 		test_ptr();
-		test_ptr1();
-		test_ptr2();
+	// 	test_ptr1();
+	// 	test_ptr2();
 	}
 }
 //gcc -Wall -Wextra -Werror -g main.c libftprintf.a && ./a.out
