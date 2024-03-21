@@ -124,7 +124,7 @@ void	test_hexupp()
 void	test_ptr()
 {
 	int		size;
-	const char	*str = "-54654654";
+	const char	*str = "-3235";
 
 	size = printf(WRITE_PTR, str);
 	print_size(size);
@@ -136,7 +136,7 @@ void	test_ptr()
 void	test_ptr1()
 {
 	int		size;
-	const char	*str = "123";
+	const char	*str = "21321";
 
 	size = printf(WRITE_PTR, str);
 	print_size(size);
@@ -148,7 +148,7 @@ void	test_ptr1()
 void	test_ptr2()
 {
 	int		size;
-	const char	*str = "2147483647";
+	const char	*str = NULL;
 
 	size = printf(WRITE_PTR, str);
 	print_size(size);
