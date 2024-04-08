@@ -6,12 +6,11 @@
 /*   By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 17:13:52 by mchonata          #+#    #+#             */
-/*   Updated: 2024/02/02 19:56:23 by mchonata         ###   ########.fr       */
+/*   Updated: 2024/04/08 18:30:31 by mchonata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 
 // 123 % 10 3unidades
 // 123/10= 12%10 2decenas
@@ -40,18 +39,12 @@
 // hex[5] = 'J'
 // hex[15] = 'a'
 
-
 //option 1
 static	size_t	size_nbr_hex(unsigned int nbr)
 {
 	size_t	len;
 
 	len = 1;
-	if (nbr < 0)
-	{
-		nbr = nbr * -1;
-		len++;
-	}
 	while (nbr >= 16)
 	{
 		nbr = nbr / 16;

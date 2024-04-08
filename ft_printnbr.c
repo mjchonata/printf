@@ -6,7 +6,7 @@
 /*   By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 21:13:22 by mchonata          #+#    #+#             */
-/*   Updated: 2024/02/02 19:49:41 by mchonata         ###   ########.fr       */
+/*   Updated: 2024/04/08 13:27:58 by mchonata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@
 // 	aux += ft_putchar(nb % 10 + '0');
 // 	return (aux);
 // }
-
 
 ///	option 2
 static	size_t	size_nbr(int nbr)
@@ -82,7 +81,6 @@ int	ft_printnbr(int n)
 	ft_putnbr_fd(n, STDOUT_FILENO);
 	return (size_nbr(n));
 }
-
 
 ///	option 3
 // static	size_t	size_nbr(int nbr)

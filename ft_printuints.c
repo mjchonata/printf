@@ -6,7 +6,7 @@
 /*   By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 13:03:31 by mchonata          #+#    #+#             */
-/*   Updated: 2024/02/02 15:54:18 by mchonata         ###   ########.fr       */
+/*   Updated: 2024/04/08 18:08:03 by mchonata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,6 @@ static	size_t	size_nbr(unsigned int nbr)
 	size_t	len;
 
 	len = 1;
-	if (nbr < 0)
-	{
-		nbr = nbr * -1;
-		len++;
-	}
 	while (nbr >= 10)
 	{
 		nbr = nbr / 10;

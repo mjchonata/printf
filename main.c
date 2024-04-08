@@ -94,9 +94,9 @@ void	test_uints()
 void	test_hex()
 {
 	int		size;
-	int		nbr;
+	unsigned int		nbr;
 
-	nbr = -232125;
+	nbr = 4294967294;
 	size = printf(WRITE_HEX, nbr);
 	print_size(size);
 	size = ft_printf(WRITE_HEX, nbr);

@@ -6,7 +6,7 @@
 /*   By: mchonata <mchonata@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 15:25:13 by mchonata          #+#    #+#             */
-/*   Updated: 2024/02/21 12:21:25 by mchonata         ###   ########.fr       */
+/*   Updated: 2024/04/08 18:30:43 by mchonata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,9 @@ static	int	ft_process(char ctrl, va_list *args)
 	else if (ctrl == 'X')
 		return (ft_printhex(va_arg(*args, int), BASE16UPP));
 	else if (ctrl == 'p')
-	{
-		// (write (1, "0x10", 4));
 		return (ft_printptr(va_arg(*args, uintptr_t), BASE16LOW));
-	}
 	return (0);
 }
-// ptr
-// hex
 
 int	ft_printf(char const *ctrl, ...)
 {
